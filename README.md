@@ -2,12 +2,11 @@
 We are committed to one vision:  Every page inside any app should be reachable with any way.  App scheme , Internal path of the app
 
 ctrip,tiktok,soul,youtube,dewu,kwai,fleamarket,xiaohongshu added
-::: hljs-right
-   2025.09.08
-:::
+                                             2025.09.08
 
 
-add gif help
+
+## add gif help
 *  path ./gif/
 
 ## npm start
