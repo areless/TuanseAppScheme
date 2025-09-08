@@ -5,6 +5,7 @@ module.exports = function (item, timeout) {
         setTimeout(() => {
             resolve(errTip);
         }, timeout);
+        const scheme_format = '%s';
         const util = require('util');
         const axios = require('axios');
         const extractURLs = (text) => {
@@ -14,7 +15,7 @@ module.exports = function (item, timeout) {
             return urls;
         }
 
-        const urlGet = extractURLs(item.data);
+        const urlGet = extractURLs(item);
 
         if (urlGet[0]) {
             const url = require('url');
@@ -41,7 +42,7 @@ module.exports = function (item, timeout) {
                 })
                 .then((response) => {
                     if (response.data.data.transformurl) {
-                        const scheme = util.format(item.scheme_service_data, response.data.data.transformurl);
+                        const scheme = util.format(scheme_format, response.data.data.transformurl);
                         resolve({
                             scheme_link: scheme,
                             scheme_identifier: params.clientAuth,
