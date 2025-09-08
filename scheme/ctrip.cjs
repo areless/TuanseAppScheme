@@ -1,9 +1,8 @@
 //ctrip
 module.exports = function (item, timeout) {
-    const errTip = 'error'
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(errTip);
+            resolve('1');
         }, timeout);
         const scheme_format = '%s';
         const util = require('util');
@@ -16,13 +15,12 @@ module.exports = function (item, timeout) {
         }
 
         const urlGet = extractURLs(item);
-
-        if (urlGet[0]) {
+        if (urlGet && urlGet[0]) {
             const url = require('url');
             const parsedUrl = url.parse(urlGet[0], true);
             const params = parsedUrl.query;
             if (!params.s_guid || !params.clientAuth) {
-                resolve(errTip);
+                resolve('1');
                 return;
             }
             const userData = {
@@ -44,17 +42,20 @@ module.exports = function (item, timeout) {
                     if (response.data.data.transformurl) {
                         const scheme = util.format(scheme_format, response.data.data.transformurl);
                         resolve({
-                            scheme_link: scheme,
+                            scheme_link_ios: scheme,
+                            scheme_link_android: scheme,
                             scheme_identifier: params.clientAuth,
                         });
                         return;
                     } else {
-                        resolve(errTip);
+                        resolve('1');
                     }
                 })
                 .catch(() => {
-                    resolve(errTip);
+                    resolve('1');
                 });
+        }else{
+            resolve('1');
         }
     })
 }
