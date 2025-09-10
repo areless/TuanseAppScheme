@@ -5,7 +5,6 @@ module.exports = function (item,timeout) {
             }, timeout);
             const scheme_format = 'bluesky://profile/%s';
             const util = require('util');
-            //pinduoduo
             const useData=item.split('/profile/');
             if(useData[1]){
                 const useNum = useData[1].split('?')[0];

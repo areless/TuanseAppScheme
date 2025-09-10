@@ -22,4 +22,8 @@ ctrip,tiktok,soul,youtube,dewu,kwai,fleamarket,xiaohongshu added
 * pnpm i
 * pnpm start
 
+### schemes list
+[schemes.md](./schemes.md "click this")
+
+
 ### future add CLI QR print
