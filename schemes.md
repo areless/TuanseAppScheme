@@ -121,3 +121,23 @@
 <td>instagram://user?username=%s
 </td>
 </tr>
+<tr><td>Douban homepage</td>
+<td>douban://douban.com/user/%s/
+</td>
+</tr>
+<tr><td>Bilibili homepage</td>
+<td>bilibili://space/%s
+</td>
+</tr>
+<tr><td>Zhihu homepage</td>
+<td>zhihu://people/%s
+</td>
+</tr>
+<tr><td>CloudMusic homepage</td>
+<td>orpheus://user/%s
+</td>
+</tr>
+<tr><td>X homepage</td>
+<td>twitter://user?screen_name=%s
+</td>
+</tr>
