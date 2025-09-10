@@ -1,8 +1,8 @@
 import prompts from 'prompts';
 import chalk from 'chalk';
 const chromePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe'; // chrome path
-const supportList = ['ctrip', 'tiktok', 'soul', 'youtube', 'dewu', 'kwai', 'fleamarket','xiaohongshu','pinduoduo','jdmobile','tmall','taobao','bluesky','reddit'];
-const useChrome = [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0];
+const supportList = ['ctrip', 'tiktok', 'soul', 'youtube', 'dewu', 'kwai', 'fleamarket','xiaohongshu','pinduoduo','jdmobile','tmall','taobao','bluesky','reddit','qishui'];
+const useChrome = [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0];
 
 const main = async (name, data, timeout) => {
     const useTaskMod = await import(`./scheme/${name}.cjs`);

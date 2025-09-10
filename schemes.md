@@ -141,3 +141,7 @@
 <td>twitter://user?screen_name=%s
 </td>
 </tr>
+<tr><td>Qishui homepage</td>
+<td>luna://luna.com/artist?artist_id=%s&user_id=%s&from_channel=&scene_name=share_awake&sub_scene_name=others&enter_app=others&from_platform=h5
+</td>
+</tr>
